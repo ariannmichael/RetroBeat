@@ -1,0 +1,89 @@
+[gd_scene load_steps=14 format=3 uid="uid://c0jxrq3gpmum6"]
+
+[ext_resource type="Texture2D" uid="uid://db77jxj5kpso0" path="res://David's File/Art/Living/scared_werewolf_spreadsheet.png" id="1_quexg"]
+[ext_resource type="Script" path="res://scenes/werewolf_drops_coffe.gd" id="2_h0j0o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e0v4e"]
+atlas = ExtResource("1_quexg")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kcroc"]
+atlas = ExtResource("1_quexg")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dswpp"]
+atlas = ExtResource("1_quexg")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yniwd"]
+atlas = ExtResource("1_quexg")
+region = Rect2(48, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nw5ui"]
+atlas = ExtResource("1_quexg")
+region = Rect2(64, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wjat6"]
+atlas = ExtResource("1_quexg")
+region = Rect2(80, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nllcu"]
+atlas = ExtResource("1_quexg")
+region = Rect2(96, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lnost"]
+atlas = ExtResource("1_quexg")
+region = Rect2(112, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7c3tg"]
+atlas = ExtResource("1_quexg")
+region = Rect2(128, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_srjne"]
+atlas = ExtResource("1_quexg")
+region = Rect2(144, 0, 16, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0ti4b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e0v4e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kcroc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dswpp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yniwd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nw5ui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wjat6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nllcu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lnost")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7c3tg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_srjne")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Werewolf Drops Coffe" type="AnimatedSprite2D"]
+position = Vector2(105, 120)
+sprite_frames = SubResource("SpriteFrames_0ti4b")
+frame = 9
+frame_progress = 1.0
+script = ExtResource("2_h0j0o")

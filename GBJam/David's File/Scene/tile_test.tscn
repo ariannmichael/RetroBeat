@@ -1,0 +1,89 @@
+[gd_scene load_steps=18 format=3 uid="uid://c7fybhgj1iuhu"]
+
+[ext_resource type="Texture2D" uid="uid://dt81hmbrlbnqf" path="res://David's File/Art/TileSets/Tiles/asfalt.png" id="1_cis3g"]
+[ext_resource type="Texture2D" uid="uid://c66ij2dqn4w6l" path="res://David's File/Art/TileSets/Tiles/cobblestone.png" id="2_nj8ed"]
+[ext_resource type="Texture2D" uid="uid://t4uwllkubcf7" path="res://David's File/Art/TileSets/Tiles/concentrate.png" id="3_78se5"]
+[ext_resource type="Texture2D" uid="uid://bk5mjhgd7nwq4" path="res://David's File/Art/TileSets/Tiles/dirt.png" id="4_dslab"]
+[ext_resource type="Texture2D" uid="uid://cya7rjwirpm7r" path="res://David's File/Art/TileSets/Tiles/flower_bed.png" id="5_1pqx7"]
+[ext_resource type="Texture2D" uid="uid://bn2modcqmbpc1" path="res://David's File/Art/TileSets/Tiles/Glass.png" id="6_4em7o"]
+[ext_resource type="Texture2D" uid="uid://bjy0vokf4kdjy" path="res://David's File/Art/TileSets/Tiles/grass_tiles.png" id="7_symok"]
+[ext_resource type="Texture2D" uid="uid://qk85wg66ru4l" path="res://David's File/Art/TileSets/Tiles/metal_fence.png" id="8_6bgr8"]
+[ext_resource type="Texture2D" uid="uid://mjfbdlyp1u1n" path="res://David's File/Art/TileSets/Tiles/roof_tiles.png" id="9_pbk60"]
+[ext_resource type="Texture2D" uid="uid://dqdhyv37ktl0i" path="res://David's File/Art/TileSets/Tiles/sand.png" id="10_d5xak"]
+[ext_resource type="Texture2D" uid="uid://byk0r3mxx4sn8" path="res://David's File/Art/TileSets/Tiles/tahta_kiris.png" id="11_nineg"]
+[ext_resource type="Texture2D" uid="uid://bgc2uh3dec8wl" path="res://David's File/Art/TileSets/Tiles/wooden_plank.png" id="12_qsccj"]
+[ext_resource type="Texture2D" uid="uid://cvai4vwbesfgv" path="res://David's File/Art/TileSets/Tiles/wooden_fence.png" id="13_0ghh5"]
+[ext_resource type="Texture2D" uid="uid://dejg2ttuxp8aw" path="res://David's File/Art/Living/Charactors/skeleboy.png" id="14_gst6j"]
+[ext_resource type="Texture2D" uid="uid://cfukg0esvytf2" path="res://David's File/Art/Living/Charactors/scared_ballon_kid.png" id="15_4mxl8"]
+[ext_resource type="Texture2D" uid="uid://dhm0yxxy57x00" path="res://David's File/Art/Living/bush.png" id="16_56w4k"]
+[ext_resource type="Texture2D" uid="uid://c3wh74r03ojvv" path="res://David's File/Art/Living/police_walkin_and_idle.png" id="17_mhy0x"]
+
+[node name="TILE TEST" type="Node2D"]
+
+[node name="Asfalt" type="Sprite2D" parent="."]
+position = Vector2(33, 17)
+texture = ExtResource("1_cis3g")
+
+[node name="Cobblestone" type="Sprite2D" parent="."]
+position = Vector2(27, 39)
+texture = ExtResource("2_nj8ed")
+
+[node name="Concentrate" type="Sprite2D" parent="."]
+position = Vector2(22, 60)
+texture = ExtResource("3_78se5")
+
+[node name="Dirt" type="Sprite2D" parent="."]
+position = Vector2(25, 82)
+texture = ExtResource("4_dslab")
+
+[node name="FlowerBed" type="Sprite2D" parent="."]
+position = Vector2(31, 97)
+texture = ExtResource("5_1pqx7")
+
+[node name="Glass" type="Sprite2D" parent="."]
+position = Vector2(24, 66)
+texture = ExtResource("6_4em7o")
+
+[node name="GrassTiles" type="Sprite2D" parent="."]
+position = Vector2(65, 88)
+texture = ExtResource("7_symok")
+
+[node name="MetalFence" type="Sprite2D" parent="."]
+position = Vector2(50, 112)
+texture = ExtResource("8_6bgr8")
+
+[node name="RoofTiles" type="Sprite2D" parent="."]
+position = Vector2(86, 42)
+texture = ExtResource("9_pbk60")
+
+[node name="Sand" type="Sprite2D" parent="."]
+position = Vector2(108, 77)
+texture = ExtResource("10_d5xak")
+
+[node name="TahtaKiris" type="Sprite2D" parent="."]
+position = Vector2(64, 75)
+texture = ExtResource("11_nineg")
+
+[node name="WoodenPlank" type="Sprite2D" parent="."]
+position = Vector2(103, 41)
+texture = ExtResource("12_qsccj")
+
+[node name="WoodenFence" type="Sprite2D" parent="."]
+position = Vector2(71, 112)
+texture = ExtResource("13_0ghh5")
+
+[node name="Skeleboy" type="Sprite2D" parent="."]
+position = Vector2(119, 16)
+texture = ExtResource("14_gst6j")
+
+[node name="ScaredBallonKid" type="Sprite2D" parent="."]
+position = Vector2(121, -36)
+texture = ExtResource("15_4mxl8")
+
+[node name="Bush" type="Sprite2D" parent="."]
+position = Vector2(13, 96)
+texture = ExtResource("16_56w4k")
+
+[node name="PoliceWalkinAndIdle" type="Sprite2D" parent="."]
+position = Vector2(54, 90)
+texture = ExtResource("17_mhy0x")

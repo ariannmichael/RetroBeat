@@ -1,0 +1,83 @@
+[gd_scene load_steps=12 format=3 uid="uid://j3yn2acqa65s"]
+
+[ext_resource type="Texture2D" uid="uid://c3wh74r03ojvv" path="res://David's File/Art/Living/police_walkin_and_idle.png" id="1_ovbow"]
+[ext_resource type="PackedScene" uid="uid://kurefewckfw" path="res://David's File/IM Chase/just_chase_script.tscn" id="2_c60eb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_led6n"]
+atlas = ExtResource("1_ovbow")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jpkx2"]
+atlas = ExtResource("1_ovbow")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8bgh6"]
+atlas = ExtResource("1_ovbow")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_quh0h"]
+atlas = ExtResource("1_ovbow")
+region = Rect2(48, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s311x"]
+atlas = ExtResource("1_ovbow")
+region = Rect2(64, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vt0qt"]
+atlas = ExtResource("1_ovbow")
+region = Rect2(80, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jptx"]
+atlas = ExtResource("1_ovbow")
+region = Rect2(96, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rydns"]
+atlas = ExtResource("1_ovbow")
+region = Rect2(112, 0, 16, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_70vpp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_led6n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jpkx2")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8bgh6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_quh0h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s311x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vt0qt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jptx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rydns")
+}],
+"loop": true,
+"name": &"Walking",
+"speed": 5.0
+}]
+
+[node name="Sunglasses Enemy" type="AnimatedSprite2D"]
+position = Vector2(190, 155)
+sprite_frames = SubResource("SpriteFrames_70vpp")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.771365
+
+[node name="Just Chase Script" parent="." instance=ExtResource("2_c60eb")]
+script = null

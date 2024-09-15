@@ -1,0 +1,142 @@
+[gd_scene load_steps=4 format=3 uid="uid://m0363r64cl1i"]
+
+[ext_resource type="Script" path="res://DP's Shit/Invantory Slots.gd" id="1_rekeo"]
+[ext_resource type="PackedScene" uid="uid://dtdw8jxawfkcp" path="res://DP's Shit/back_pack_tile_map.tscn" id="2_yi1dl"]
+[ext_resource type="Script" path="res://DP's Shit/Slot Tutorial.gd" id="3_ygowc"]
+
+[node name="Invantory Slots" type="Node2D" groups=["slots"]]
+z_index = 5
+scale = Vector2(10, 10)
+script = ExtResource("1_rekeo")
+
+[node name="BackPack TileMap" parent="." instance=ExtResource("2_yi1dl")]
+rendering_quadrant_size = 8
+layer_0/tile_data = PackedInt32Array(-2, 1900545, 9, -1, 1966081, 9, -65536, 1966081, 9, -65535, 1966081, 9, -65534, 1966081, 9, -65533, 1966081, 9, -65532, 1966081, 9, -65531, 1966081, 9, -65530, 1966081, 9, -65529, 1966081, 9, -65528, 2031617, 9, -65527, 2097153, 9, 8, 1966081, 10, 65544, 1966081, 10, 131080, 1966081, 10, 196616, 1966081, 10, 9, 2097153, 10, 65545, 2097153, 10, 131081, 2097153, 10, 196617, 2097153, 10, 262142, 1900545, 10, 196606, 1900545, 10, 131070, 1900545, 10, 65534, 1900545, 10, 196610, 1966081, 10, 196611, 1966081, 10, 131076, 1966081, 10, 65541, 1966081, 10, 65542, 1966081, 10, 7, 1966081, 10, 65535, 1966081, 10, 0, 1966081, 10, 65537, 1966081, 10, 65538, 1966081, 10, 131075, 1966081, 10, 196613, 1966081, 10, 196614, 1966081, 10, 131071, 1966081, 10, 196607, 1966081, 10, 262143, 1966081, 10, 65536, 1966081, 10, 131072, 1966081, 10, 196608, 1966081, 10, 1, 1966081, 10, 131073, 1966081, 10, 196609, 1966081, 10, 2, 1966081, 10, 131074, 1966081, 10, 3, 1966081, 10, 65539, 1966081, 10, 4, 1966081, 10, 65540, 1966081, 10, 196612, 1966081, 10, 5, 1966081, 10, 131077, 1966081, 10, 6, 1966081, 10, 131078, 1966081, 10, 65543, 1966081, 10, 131079, 1966081, 10, 196615, 1966081, 10, 327678, 1900545, 11, 393214, 1900545, 12, 327679, 1966081, 10, 393215, 1966081, 12, 262144, 1966081, 10, 327680, 1966081, 12, 262145, 1966081, 10, 327681, 1966081, 12, 262146, 1966081, 10, 327682, 1966081, 12, 262147, 1966081, 10, 327683, 1966081, 12, 262148, 1966081, 10, 327684, 1966081, 12, 262149, 1966081, 10, 327685, 1966081, 12, 262150, 1966081, 10, 327686, 1966081, 12, 262151, 1966081, 10, 327687, 1966081, 12, 262152, 1966081, 10, 327688, 2031617, 12, 262153, 2097153, 11)
+
+[node name="Button0" type="Button" parent="."]
+offset_left = -8.0
+offset_bottom = 8.0
+scale = Vector2(2, 2)
+
+[node name="Button1" type="Button" parent="."]
+offset_left = 12.0
+offset_right = 20.0
+offset_bottom = 8.0
+scale = Vector2(2, 2)
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 32.0
+offset_right = 40.0
+offset_bottom = 8.0
+scale = Vector2(2, 2)
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 52.0
+offset_right = 60.0
+offset_bottom = 8.0
+scale = Vector2(2, 2)
+
+[node name="Button4" type="Button" parent="."]
+offset_left = -8.0
+offset_top = 20.0
+offset_bottom = 28.0
+scale = Vector2(2, 2)
+
+[node name="Button5" type="Button" parent="."]
+offset_left = 12.0
+offset_top = 20.0
+offset_right = 20.0
+offset_bottom = 28.0
+scale = Vector2(2, 2)
+
+[node name="Button6" type="Button" parent="."]
+offset_left = 32.0
+offset_top = 20.0
+offset_right = 40.0
+offset_bottom = 28.0
+scale = Vector2(2, 2)
+
+[node name="Button7" type="Button" parent="."]
+offset_left = 52.0
+offset_top = 20.0
+offset_right = 60.0
+offset_bottom = 28.0
+scale = Vector2(2, 2)
+
+[node name="Sprite0" type="Sprite2D" parent="."]
+position = Vector2(-3.7, 6.2)
+scale = Vector2(0.8, 0.8)
+
+[node name="Sprite1" type="Sprite2D" parent="."]
+position = Vector2(16.3, 6.2)
+scale = Vector2(0.8, 0.8)
+
+[node name="Sprite2" type="Sprite2D" parent="."]
+position = Vector2(36.3, 6.2)
+scale = Vector2(0.8, 0.8)
+
+[node name="Sprite3" type="Sprite2D" parent="."]
+position = Vector2(56.3, 6.2)
+scale = Vector2(0.8, 0.8)
+
+[node name="Sprite4" type="Sprite2D" parent="."]
+position = Vector2(-3.7, 26.2)
+scale = Vector2(0.8, 0.8)
+
+[node name="Sprite5" type="Sprite2D" parent="."]
+position = Vector2(16.3, 26.2)
+scale = Vector2(0.8, 0.8)
+
+[node name="Sprite6" type="Sprite2D" parent="."]
+position = Vector2(36.3, 26.2)
+scale = Vector2(0.8, 0.8)
+
+[node name="Sprite7" type="Sprite2D" parent="."]
+position = Vector2(56.3, 26.2)
+scale = Vector2(0.8, 0.8)
+
+[node name="Money" type="Label" parent="."]
+offset_left = -6.6
+offset_top = -25.0
+offset_right = 33.4
+offset_bottom = -2.0
+scale = Vector2(0.539661, 0.641423)
+
+[node name="Tutorial" type="Label" parent="."]
+offset_left = -11.4
+offset_top = -38.0
+offset_right = 180.6
+offset_bottom = -15.0
+scale = Vector2(0.330469, 0.497544)
+text = "\"Tab\" To Open/Close Bag"
+
+[node name="Slot Tutorial" type="Label" parent="."]
+offset_left = -9.6
+offset_top = -50.0
+offset_right = 182.4
+offset_bottom = -27.0
+scale = Vector2(0.346711, 0.513102)
+text = "Click Slot in Bag to Select to Sell/Add Part!"
+script = ExtResource("3_ygowc")
+
+[node name="Timer" type="Timer" parent="Slot Tutorial"]
+wait_time = 20.0
+autostart = true
+
+[node name="Inv Full" type="Label" parent="."]
+offset_left = 9.5
+offset_top = -30.2
+offset_right = 248.5
+offset_bottom = -7.2
+scale = Vector2(0.385527, 0.820974)
+text = "Invantoy Full go sell something"
+
+[connection signal="pressed" from="Button0" to="." method="_on_button_0_pressed"]
+[connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="Button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="Button7" to="." method="_on_button_7_pressed"]
+[connection signal="timeout" from="Slot Tutorial/Timer" to="Slot Tutorial" method="_on_timer_timeout"]
