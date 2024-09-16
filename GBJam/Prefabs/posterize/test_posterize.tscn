@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://cp7oewt8tl8lo"]
+
+[ext_resource type="Texture2D" uid="uid://ctsw6xhwf7cpx" path="res://Textures/he.png" id="1_l71rc"]
+[ext_resource type="Material" uid="uid://d33n3id317yq5" path="res://Prefabs/posterize/posterize.tres" id="3_id06t"]
+[ext_resource type="Material" uid="uid://dpewax8q8l2pu" path="res://Prefabs/posterize/posterize_2.tres" id="4_sa8x1"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_l71rc")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+material = ExtResource("3_id06t")
+layout_mode = 0
+offset_left = -102.0
+offset_top = -124.0
+offset_right = 238.0
+offset_bottom = 353.0
+
+[node name="ColorRect2" type="ColorRect" parent="Control"]
+material = ExtResource("4_sa8x1")
+layout_mode = 0
+offset_left = -187.0
+offset_top = -354.0
+offset_right = 132.0
+offset_bottom = -4.0
