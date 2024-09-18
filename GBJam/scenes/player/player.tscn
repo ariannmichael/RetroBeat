@@ -1,14 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://i1lmhlebh2oa"]
+[gd_scene load_steps=10 format=3 uid="uid://cccbjtmq4ojrj"]
 
 [ext_resource type="Script" path="res://scenes/player/scripts/player.gd" id="1_wv0b8"]
 [ext_resource type="Texture2D" uid="uid://dejg2ttuxp8aw" path="res://David's File/Art/Living/Charactors/skeleboy.png" id="2_uvh8c"]
 [ext_resource type="Script" path="res://scenes/player/scripts/player_state_machine.gd" id="3_ioc15"]
-[ext_resource type="Script" path="res://scenes/player/scripts/state_idle.gd" id="4_2x7s1"]
-[ext_resource type="Script" path="res://scenes/player/scripts/state_walk.gd" id="5_hngok"]
+[ext_resource type="Script" path="res://scenes/player/scripts/player_state_idle.gd" id="4_2x7s1"]
+[ext_resource type="Script" path="res://scenes/player/scripts/player_state_walk.gd" id="5_hngok"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n3tb7"]
-radius = 5.0
-height = 22.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_sxijh"]
+radius = 4.0
 
 [sub_resource type="Animation" id="Animation_dmm8r"]
 length = 0.001
@@ -52,9 +51,11 @@ _data = {
 script = ExtResource("1_wv0b8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_n3tb7")
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_sxijh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -12)
 texture = ExtResource("2_uvh8c")
 hframes = 7
 

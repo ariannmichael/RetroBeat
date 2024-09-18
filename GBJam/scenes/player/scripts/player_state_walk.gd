@@ -1,5 +1,5 @@
 extends State
-class_name State_Walk
+class_name Player_State_Walk
 
 @onready var idle: State = $"../Idle"
 
@@ -7,7 +7,7 @@ class_name State_Walk
 
 
 func enter() -> void:
-	player.update_animation("walk")
+	node.update_animation("walk")
 
 
 func exit() -> void:
@@ -15,13 +15,13 @@ func exit() -> void:
 
 
 func process(_delta: float) -> State:
-	if player.direction == Vector2.ZERO:
+	if node.direction == Vector2.ZERO:
 		return idle
 	
-	player.velocity = player.direction * move_speed
+	node.velocity = node.direction * move_speed
 	
-	if player.set_direction():
-		player.update_animation("walk")
+	if node.set_direction():
+		node.update_animation("walk")
 	
 	return null
 

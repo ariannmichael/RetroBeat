@@ -1,0 +1,87 @@
+[gd_scene load_steps=10 format=3 uid="uid://d03lrbo6fyiuw"]
+
+[ext_resource type="Texture2D" uid="uid://c1gidl31igkl2" path="res://scenes/enemy/sprites/police_walkin_and_idle.png" id="1_38mks"]
+[ext_resource type="Script" path="res://scenes/enemy/scripts/enemy.gd" id="1_xq4hc"]
+[ext_resource type="Script" path="res://scenes/enemy/scripts/enemy_state_machine.gd" id="2_kew52"]
+[ext_resource type="Script" path="res://scenes/enemy/scripts/enemy_state_idle.gd" id="4_a6uqg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l3qrb"]
+radius = 5.0
+
+[sub_resource type="Animation" id="Animation_ajnec"]
+resource_name = "idle_down"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1, 0]
+}
+
+[sub_resource type="Animation" id="Animation_81l01"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_w3il1"]
+resource_name = "walk_side"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [3, 4, 5, 6, 7, 8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q272f"]
+_data = {
+"RESET": SubResource("Animation_81l01"),
+"idle_down": SubResource("Animation_ajnec"),
+"walk_side": SubResource("Animation_w3il1")
+}
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_xq4hc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -12)
+texture = ExtResource("1_38mks")
+hframes = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+show_behind_parent = true
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_l3qrb")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_q272f")
+}
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("2_kew52")
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("4_a6uqg")
