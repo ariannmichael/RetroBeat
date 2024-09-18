@@ -75,9 +75,9 @@ animations = [{
 [node name="Sunglasses Enemy" type="AnimatedSprite2D"]
 position = Vector2(190, 155)
 sprite_frames = SubResource("SpriteFrames_70vpp")
-animation = &"Idle"
-autoplay = "Idle"
-frame_progress = 0.771365
+animation = &"Walking"
+autoplay = "Walking"
+frame_progress = 0.729502
 
 [node name="Just Chase Script" parent="." instance=ExtResource("2_c60eb")]
 script = null
