@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhubhrd40a66"]
+
+[sub_resource type="Environment" id="Environment_iag28"]
+
+[node name="WorldEnvironment" type="WorldEnvironment"]
+environment = SubResource("Environment_iag28")
