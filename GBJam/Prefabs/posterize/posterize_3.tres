@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://45ak4r2ct24j"]
+
+[ext_resource type="Shader" path="res://Prefabs/posterize/posterize.gdshader" id="1_6pmi7"]
+[ext_resource type="Texture2D" uid="uid://w0c8agu0vx15" path="res://Prefabs/posterize/gba_gradient3.tres" id="2_l5wv5"]
+[ext_resource type="Texture2D" uid="uid://da6l2vu75gyhb" path="res://Prefabs/posterize/gba_gradient.tres" id="3_1hcqe"]
+
+[resource]
+shader = ExtResource("1_6pmi7")
+shader_parameter/brightness = 0.0
+shader_parameter/source_palette = ExtResource("2_l5wv5")
+shader_parameter/target_palette = ExtResource("3_1hcqe")

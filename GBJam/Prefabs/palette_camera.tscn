@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://brg7bvfudoetu"]
+
+[ext_resource type="Material" uid="uid://d3ttdhemgf1hb" path="res://Prefabs/posterize/posterize_4.tres" id="1_wx7hu"]
+
+[node name="PaletteCamera" type="Camera2D"]
+position = Vector2(1, -2)
+
+[node name="Must_Be_Bottom_In_Scene" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -72.0
+offset_right = 80.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PaletteShader" type="ColorRect" parent="Must_Be_Bottom_In_Scene"]
+material = ExtResource("1_wx7hu")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
