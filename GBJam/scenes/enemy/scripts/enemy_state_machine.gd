@@ -1,9 +1,9 @@
 extends Node
-class_name Enemy_State_Machine
+class_name EnemyStateMachine
 
-var states: Array[State]
-var prev_state: State
-var current_state: State
+var states: Array[EnemyState]
+var prev_state: EnemyState
+var current_state: EnemyState
 
 
 # Called when the node enters the scene tree for the first time.
@@ -28,18 +28,16 @@ func initialize(_enemy: Enemy) -> void:
 	states = []
 	
 	for c in get_children():
-		if c is State:
+		if c is EnemyState:
 			states.append(c)
 	
 	if states.size() > 0:
-		states[0].node = _enemy
+		states[0].enemy = _enemy
 		change_state(states[0])
 		process_mode = Node.PROCESS_MODE_INHERIT
-	
-	print(states[0])
 
 
-func change_state(new_state: State) -> void:
+func change_state(new_state: EnemyState) -> void:
 	if !new_state || new_state == current_state:
 		return
 	

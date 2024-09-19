@@ -1,9 +1,9 @@
 extends Node
 class_name PlayerStateMachine
 
-var states: Array[State]
-var prev_state: State
-var current_state: State
+var states: Array[PlayerState]
+var prev_state: PlayerState
+var current_state: PlayerState
 
 
 # Called when the node enters the scene tree for the first time.
@@ -28,16 +28,16 @@ func initialize(_player: Player) -> void:
 	states = []
 	
 	for c in get_children():
-		if c is State:
+		if c is PlayerState:
 			states.append(c)
 	
 	if states.size() > 0:
-		states[0].node = _player
+		states[0].player = _player
 		change_state(states[0])
 		process_mode = Node.PROCESS_MODE_INHERIT
 
 
-func change_state(new_state: State) -> void:
+func change_state(new_state: PlayerState) -> void:
 	if !new_state || current_state == new_state:
 		return
 	

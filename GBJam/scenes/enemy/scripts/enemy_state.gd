@@ -1,7 +1,7 @@
 extends Node
-class_name State
+class_name EnemyState
 
-static var node: CharacterBody2D
+static var enemy: Enemy
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,13 +16,13 @@ func exit() -> void:
 	pass
 	
 
-func process(_delta: float) -> State:
+func process(_delta: float) -> EnemyState:
 	return null
 
 
-func physics(_delta: float) -> State:
+func physics(_delta: float) -> EnemyState:
 	return null
 
 
-func handle_input(_event: InputEvent) -> State:
+func handle_input(_event: InputEvent) -> EnemyState:
 	return null

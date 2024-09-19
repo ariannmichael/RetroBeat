@@ -1,5 +1,5 @@
-extends State
-class_name Enemy_State_Idle
+extends EnemyState
+class_name EnemyStateIdle
 
 @export var move_speed: float = 15.0
 
@@ -11,7 +11,7 @@ func enter() -> void:
 	randomize_wander()
 	
 
-func process(delta: float) -> State:
+func process(delta: float) -> EnemyState:
 	if wander_time > 0:
 		wander_time -= delta
 	else:
@@ -20,9 +20,9 @@ func process(delta: float) -> State:
 	return null
 
 
-func physics(_delta: float) -> State:
-	if node:
-		node.velocity = move_direction * move_speed
+func physics(_delta: float) -> EnemyState:
+	if enemy:
+		enemy.velocity = move_direction * move_speed
 	
 	return null
 
