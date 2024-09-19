@@ -2,13 +2,15 @@ extends EnemyState
 class_name EnemyStateIdle
 
 @export var move_speed: float = 15.0
+@onready var follow: EnemyStateFollow = $"../Follow"
 
 var move_direction: Vector2
 var wander_time: float
-
+var player: Player
 
 func enter() -> void:
 	randomize_wander()
+	player = get_tree().get_first_node_in_group("Player")
 	
 
 func process(delta: float) -> EnemyState:
@@ -16,6 +18,11 @@ func process(delta: float) -> EnemyState:
 		wander_time -= delta
 	else:
 		randomize_wander()
+	
+	var direction = player.global_position - enemy.global_position
+	
+	if direction.length() < MAX_DISTANCE_TO_PlAYER:
+		return follow
 	
 	return null
 

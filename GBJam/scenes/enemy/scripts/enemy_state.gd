@@ -1,6 +1,7 @@
 extends Node
 class_name EnemyState
 
+@export var MAX_DISTANCE_TO_PlAYER: float = 80.0
 static var enemy: Enemy
 
 # Called when the node enters the scene tree for the first time.
